@@ -35,4 +35,4 @@ var Rock = cc.Class.extend({
   getShape: function() {
     return this.shape;
   }
-})
+});

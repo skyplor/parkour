@@ -13,7 +13,7 @@ SimpleRecognizer.prototype.beginPoint = function(x, y) {
   this.points = [];
   this.result = "";
   this.points.push(new Point(x, y));
-}
+};
 
 // onTouchMoved
 SimpleRecognizer.prototype.movePoint = function(x, y) {
@@ -52,7 +52,7 @@ SimpleRecognizer.prototype.movePoint = function(x, y) {
   if (this.result != newRtn) {
     this.result = "not support";
   }
-}
+};
 
 // onTouchEnded
 SimpleRecognizer.prototype.endPoint = function() {
@@ -60,8 +60,8 @@ SimpleRecognizer.prototype.endPoint = function() {
     return "error";
   }
   return this.result;
-}
+};
 
 SimpleRecognizer.prototype.getPoints = function() {
   return this.points;
-}
+};

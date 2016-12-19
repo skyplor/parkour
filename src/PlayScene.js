@@ -45,7 +45,7 @@ var PlayScene = cc.Scene.extend({
     var shapes = arbiter.getShapes();
     // shapes[0] is runner
     this.shapesToRemove.push(shapes[1]);
-    cc.audioEngine.playEffect(res.pickup_coin_mp3);
+    cc.audioEngine.playEffect(res.pickup_coin_mp3, false);
     var statusLayer = this.getChildByTag(TagOfLayer.Status);
     statusLayer.addCoin(1);
   },

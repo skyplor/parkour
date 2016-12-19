@@ -4,7 +4,7 @@ if (typeof RunnerStat == "undefined") {
   RunnerStat.running = 0;
   RunnerStat.jumpUp = 1;
   RunnerStat.jumpDown = 2;
-};
+}
 
 var AnimationLayer = cc.Layer.extend({
   spriteSheet:null,
@@ -69,7 +69,7 @@ var AnimationLayer = cc.Layer.extend({
 
     cc.eventManager.addListener({
         event: cc.EventListener.KEYBOARD,
-        onKeyReleased: this.onKeyReleased,
+        onKeyReleased: this.onKeyReleased
     }, this);
 
     this.scheduleUpdate();
@@ -144,7 +144,7 @@ var AnimationLayer = cc.Layer.extend({
   jump: function() {
     cc.log("jump");
     if (this.stat == RunnerStat.running) {
-      cc.audioEngine.playEffect(res.jump_mp3);
+      cc.audioEngine.playEffect(res.jump_mp3, false);
       this.body.applyImpulse(cp.v(0, 250), cp.v(0, 0));
       this.stat = RunnerStat.jumpUp;
       this.sprite.stopAllActions();
